@@ -1,4 +1,3 @@
-Here’s a well-structured `README.md` for the **SwiftVote** GitHub repository:
 
 ```markdown
 # SwiftVote 🗳️
