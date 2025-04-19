@@ -1,63 +1,119 @@
 # SwiftVote
-```markdown
-# SwiftVote 🗳️
 
-A lightweight, real-time voting application built with Swift for iOS. SwiftVote allows users to create, participate in, and manage polls seamlessly with a clean and intuitive interface.
+SwiftVote is a secure, efficient digital voting system built in Python that provides a seamless voting experience while maintaining the integrity and confidentiality of the electoral process.
 
-![SwiftVote Demo](https://github.com/NANDAGOPALNG/SwiftVote/blob/main/Demo.gif)
+## Features
 
-## Features ✨
+- **Secure Authentication**: Multi-layered security with facial recognition and password verification
+- **User-Friendly Interface**: Simple and intuitive voting process accessible to all users
+- **Real-Time Results**: Instant counting and visualization of voting outcomes
+- **Admin Dashboard**: Comprehensive management tools for election officials
+- **Data Encryption**: End-to-end encryption to protect voter information
+- **Audit Trail**: Complete logging of all system activities for transparency
 
-- **Create Polls**: Easily set up new polls with customizable options.
-- **Real-Time Voting**: Instant updates as votes are cast.
-- **User Authentication**: Secure sign-in via Firebase (or other providers).
-- **Poll Analytics**: View results in real-time with visual charts.
-- **Share Polls**: Generate links to share polls with others.
-- **Clean UI**: Built with SwiftUI for a modern, responsive experience.
+## System Requirements
 
-## Tech Stack 🛠️
+- Python 3.8+
+- OpenCV for facial recognition
+- SQLite for database management
+- Additional dependencies listed in `requirements.txt`
 
-- **Frontend**: SwiftUI
-- **Backend**: Firebase (Firestore, Auth)
-- **State Management**: Combine/Async-Await
-- **Charts**: Swift Charts or a 3rd-party library *(if applicable)*
+## Installation
 
-## Installation 📲
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/NANDAGOPALNG/SwiftVote.git
+1. Clone the repository:
    ```
-2. Open the project in **Xcode** (v14+ recommended).
-3. Install dependencies (if any) via **Swift Package Manager** or **CocoaPods**.
-4. Configure Firebase:
-   - Add your `GoogleService-Info.plist` to the project.
-   - Enable Firestore and Authentication in Firebase Console.
-5. Build and run on a simulator or physical device.
+   git clone https://github.com/NANDAGOPALNG/SwiftVote.git
+   cd SwiftVote
+   ```
 
-## Usage 🚀
+2. Create and activate a virtual environment (recommended):
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-1. **Sign up** or **log in**.
-2. **Create a poll**:
-   - Enter a question and options.
-   - Set a duration (optional).
-3. **Share the poll** via link or social media.
-4. **View real-time results** as votes come in.
+3. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-## Contributing 🤝
+4. Set up the database:
+   ```
+   python setup_db.py
+   ```
 
-Pull requests are welcome! For major changes, open an issue first to discuss proposed changes.
+## Usage
 
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`).
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
+### For Voters
 
-## License 📜
+1. Launch the voter application:
+   ```
+   python voter_app.py
+   ```
 
-This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file for details.
+2. Complete facial recognition and password verification
+3. Cast your vote securely
+4. Receive confirmation of your vote submission
 
----
+### For Administrators
 
-⭐ **Star this repo** if you find it useful!  
+1. Launch the admin dashboard:
+   ```
+   python admin_app.py
+   ```
+
+2. Log in with admin credentials
+3. Access tools for:
+   - Managing voter registrations
+   - Setting up elections
+   - Monitoring voting progress
+   - Analyzing results
+   - Generating reports
+
+## Project Structure
+
+```
+SwiftVote/
+├── admin_app.py         # Admin dashboard application
+├── database/            # Database scripts and files
+├── encryption/          # Security and encryption modules
+├── face_recognition/    # Facial recognition implementation
+├── static/              # Static assets (CSS, images)
+├── templates/           # HTML templates
+├── tests/               # Test suite
+├── utils/               # Utility functions
+├── voter_app.py         # Voter-facing application
+├── requirements.txt     # Project dependencies
+└── setup_db.py          # Database setup script
+```
+
+## Security Measures
+
+SwiftVote implements several security measures:
+- Biometric verification
+- Two-factor authentication
+- End-to-end encryption
+- Session management
+- Prevention of double voting
+- Audit trails
+- Regular security updates
+
+## Contributing
+
+We welcome contributions to SwiftVote! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+Nandagopal NG - [GitHub Profile](https://github.com/NANDAGOPALNG)
+
+Project Link: [https://github.com/NANDAGOPALNG/SwiftVote](https://github.com/NANDAGOPALNG/SwiftVote)
